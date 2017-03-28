@@ -1,0 +1,62 @@
+title-color = #835d1a
+header-background-color = title-color
+background-color = #fffacd
+ruler-color = #F6C122
+header-height = 10vmin
+@font-face
+  font-family: Adam
+  src: url("ADAM.CG.PRO.otf")
+
+a, p, h1, h2, h3, h4, h5, img, hr
+  margin-bottom: 0
+a
+  text-decoration: none
+  color: inherit
+html
+  background-color: background-color
+  font-family: Arial
+  font-size: 4.5vmin
+
+body
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  margin: 0
+
+header
+  // z-index: 1
+  display: flex
+  justify-content: space-around
+  align-items: center
+  background-color: header-background-color
+  height: header-height
+  position: fixed
+  width: 100vw
+  color: white
+  .black-icon
+    filter: invert(1)
+main
+  margin-top: header-height
+section
+  display: flex
+  flex-flow: column nowrap
+  // align-items: center
+  text-align: center
+  font-family: Adam
+  color: title-color
+  img
+    max-width: 100%
+    margin-top: 3em
+hr
+  width: 80%
+  border: 0.2em solid ruler-color
+  margin-top: 2em
+
+footer
+  text-align: center
+  color: title-color
+  p
+    line-height: 1.5em
+
+  i
+    margin: 1em

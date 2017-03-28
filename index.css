@@ -1,0 +1,72 @@
+@font-face {
+  font-family: Adam;
+  src: url("ADAM.CG.PRO.otf");
+}
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+img,
+hr {
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  background-color: #fffacd;
+  font-family: Arial;
+  font-size: 4.5vmin;
+}
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #835d1a;
+  height: 10vmin;
+  position: fixed;
+  width: 100vw;
+  color: #fff;
+}
+header .black-icon {
+  filter: invert(1);
+}
+main {
+  margin-top: 10vmin;
+}
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  font-family: Adam;
+  color: #835d1a;
+}
+section img {
+  max-width: 100%;
+  margin-top: 3em;
+}
+hr {
+  width: 80%;
+  border: 0.2em solid #f6c122;
+  margin-top: 2em;
+}
+footer {
+  text-align: center;
+  color: #835d1a;
+}
+footer p {
+  line-height: 1.5em;
+}
+footer i {
+  margin: 1em;
+}
