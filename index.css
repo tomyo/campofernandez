@@ -26,13 +26,18 @@ div:focus {
 }
 input,
 textarea,
-button {
+button,
+a {
   border: none;
   font-size: inherit;
   font-family: Arial;
   color: inherit;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 1em;
 }
-button {
+button,
+a {
   cursor: pointer;
   color: #fff;
   background-color: #835d1a;
@@ -124,34 +129,14 @@ section#contact {
   margin-left: 2em;
   margin-right: 2em;
 }
-section#contact input,
-section#contact textarea,
-section#contact button {
-  margin-top: 1em;
-  padding: 1em;
-  border-radius: 1em;
+.contact-link {
+  align-self: center;
 }
-section#contact input::-webkit-input-placeholder,
-section#contact textarea::-webkit-input-placeholder,
-section#contact button::-webkit-input-placeholder {
-  color: #835d1a;
+.show-on-target:not(:target) {
+  display: none;
 }
-section#contact input::-moz-placeholder,
-section#contact textarea::-moz-placeholder,
-section#contact button::-moz-placeholder {
-  color: #835d1a;
-  opacity: 1;
-}
-section#contact input:-moz-placeholder,
-section#contact textarea:-moz-placeholder,
-section#contact button:-moz-placeholder {
-  color: #835d1a;
-  opacity: 1;
-}
-section#contact input:-ms-input-placeholder,
-section#contact textarea:-ms-input-placeholder,
-section#contact button:-ms-input-placeholder {
-  color: #835d1a;
+.show-on-target:target {
+  display: flex;
 }
 .slick-initialized.slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -168,6 +153,13 @@ section#contact button:-ms-input-placeholder {
 }
 .slick-initialized .slick-dots li button::before {
   font-size: 0.5rem;
+}
+.unstyled {
+  color: inherit;
+  background-color: transparent;
+}
+.hidden {
+  display: none;
 }
 hr {
   width: 80%;

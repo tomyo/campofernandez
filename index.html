@@ -35,8 +35,12 @@
       <section id="home">
         <img src="logo.png"/>
         <h3>WWW.CAMPOFERNANDEZ.CL</h3>
+        <a onclick="hideContactFormButton()" class="contact-link" href="#contact">
+          CONTÁCTANOS
+        </a>
       </section>
       <hr />
+
       <section id="products">
         <h3>PRODUCTOS</h3>
         <div class="slider slider-for">
@@ -78,7 +82,7 @@
                   Elaborado con papa natural, carne de vacuno certificada con
                   10% de materia grasa, cebolla y aliños utilizados para que se
                   resalten los sabores característicos de la papa rellena.
-                  Presentada en un envase(estuche) cuya capacidad es de 2 papas
+                  Presentada en un envase (estuche) cuya capacidad es de 2 papas
                   rellenas.
                 </p>
               </div>
@@ -87,8 +91,9 @@
                 <hr />
                 <img src="img/queso.png"/>
                 <p>
-                  Elaborado con puré de papa natural y queso. Presentada en un
-                  envase(estuche) cuya capacidad es de 2 papas rellenas.
+                  Elaborado con puré de papa natural y queso.<br />
+                  Presentada en un envase (estuche) cuya capacidad es de 2 papas
+                  rellenas.
                 </p>
               </div>
               <div>
@@ -96,8 +101,8 @@
                 <hr />
                 <img src="img/queso_jamon.png"/>
                 <p>
-                  Elaborado con puré de papa natural, jamón de cerdo y queso.
-                  Presentada en un envase(estuche) cuya capacidad es de 2 papas
+                  Elaborado con puré de papa natural, jamón de cerdo y queso.<br />
+                  Presentada en un envase (estuche) cuya capacidad es de 2 papas
                   rellenas.
                 </p>
               </div>
@@ -106,7 +111,12 @@
         </div>
       </section>
       <hr />
-      <section id="contact">
+      <section id="show-contact-form">
+        <a onclick="hideContactFormButton()" class="contact-link" href="#contact">
+          CONTÁCTANOS
+        </a>
+      </section>
+      <section class="show-on-target" id="contact">
         <h3>CONTACTO</h3>
         <form>
           <input name="name" type="text" placeholder="Nombre"/>
@@ -116,6 +126,12 @@
           <button type="submit">Enviar</button>
         </form>
       </section>
+      <section class="show-on-target" id="thanks">
+        <h3>¡GRACIAS POR ESCRIBIRNOS!</h3>
+        <p>
+          Te contactaremos a la brevedad.
+        </p>
+      </section>
     </main>
     <footer>
       <hr />
@@ -124,10 +140,10 @@
         Miraflores 1121, Lampa. Región Metropolitana
       </p>
       <div class="social">
-        <a href="https://www.facebook.com/campofernandezoficial/" target="_blank">
+        <a class="unstyled" href="https://www.facebook.com/campofernandezoficial/" target="_blank">
           <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
         </a>
-        <a href="https://twitter.com/_CampoFernandez" target="_blank">
+        <a class="unstyled" href="https://twitter.com/_CampoFernandez" target="_blank">
           <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
         </a>
       </div>

@@ -1,3 +1,12 @@
+hideMe = (event) => {
+  // console.log(this);
+  event.target.classList.add('hidden');
+}
+
+hideContactFormButton = () => {
+  document.getElementById("show-contact-form").classList.add('hidden');
+}
+
 $(document).ready (() => {
   $('.slider-for').slick({
     lazyLoad: 'ondemand',

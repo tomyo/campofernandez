@@ -20,12 +20,16 @@ input, textarea, button, div
   &:focus
     outline: none
     // border: 0.1em beige solid
-input, textarea, button
+input, textarea, button, a
   border: none
   font-size: inherit
   font-family: first-font-family
   color: inherit
-button
+  margin-top: 1em
+  padding: 1em
+  border-radius: 1em
+  placeholder-color(title-color)
+button, a
   cursor: pointer
   color: white
   background-color: title-color
@@ -130,12 +134,13 @@ section
         margin-top: 1em
   &#contact
     horizontalMargin()
-    input, textarea, button
-      margin-top: 1em
-      padding: 1em
-      border-radius: 1em
-      placeholder-color(title-color)
-      // placeholder-font-weight(bold)
+
+.contact-link
+  align-self: center
+.show-on-target:not(:target)
+  display: none
+.show-on-target:target
+  display: flex
 
 .slick-initialized
   &.slick-dotted.slick-slider
@@ -149,6 +154,12 @@ section
       margin: 0 1em
     li button::before
       font-size: 0.5rem
+
+.unstyled
+  color: inherit
+  background-color: transparent
+.hidden
+  display: none
 
 hr
   width: 80%
