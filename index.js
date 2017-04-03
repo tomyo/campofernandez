@@ -31,4 +31,12 @@ $(document).ready (() => {
     // respondTo: 'min',
     focusOnSelect: true
   });
+  $('.papa-details').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    respondTo: 'min',
+    autoplay: true
+  });
 });
