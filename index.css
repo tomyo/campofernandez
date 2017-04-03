@@ -18,8 +18,30 @@ a {
   text-decoration: none;
   color: inherit;
 }
+input:focus,
+textarea:focus,
+button:focus,
 div:focus {
   outline: none;
+}
+input,
+textarea,
+button {
+  border: none;
+  font-size: inherit;
+  font-family: Arial;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  color: #fff;
+  background-color: #835d1a;
+}
+form {
+  display: inherit;
+  flex-flow: inherit;
+  align-items: inherit;
+  justify-content: inherit;
 }
 html {
   background-color: #fffacd;
@@ -65,37 +87,71 @@ section#home img {
   max-height: 100vh;
   margin: 0 auto;
 }
-section#productos hr {
+section#products hr {
   border-width: 0.1em;
   width: 50%;
   margin-top: 0.5em;
 }
-section#productos .slider-for {
+section#products .slider-for {
   max-width: 100vmin;
   margin-left: auto;
   margin-right: auto;
 }
-section#productos .slider-nav .draggable {
+section#products .slider-nav .draggable {
   cursor: pointer !important;
 }
-section#productos .slider {
+section#products .slider {
   margin-top: 2em;
 }
-section#productos .details {
-  margin: 0 2em;
+section#products .details {
+  margin-left: 2em;
+  margin-right: 2em;
 }
-section#productos .details>div {
+section#products .details>div {
   margin-top: 2em;
 }
-section#productos .details p {
+section#products .details p {
   font-family: Arial;
 }
-section#productos .details img {
+section#products .details img {
   max-width: 100vw;
   max-height: 100vh;
   margin: 0 auto;
   width: 3em;
   margin-top: 1em;
+}
+section#contact {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+section#contact input,
+section#contact textarea,
+section#contact button {
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 1em;
+}
+section#contact input::-webkit-input-placeholder,
+section#contact textarea::-webkit-input-placeholder,
+section#contact button::-webkit-input-placeholder {
+  color: #835d1a;
+}
+section#contact input::-moz-placeholder,
+section#contact textarea::-moz-placeholder,
+section#contact button::-moz-placeholder {
+  color: #835d1a;
+  opacity: 1;
+}
+section#contact input:-moz-placeholder,
+section#contact textarea:-moz-placeholder,
+section#contact button:-moz-placeholder {
+  color: #835d1a;
+  opacity: 1;
+}
+section#contact input:-ms-input-placeholder,
+section#contact textarea:-ms-input-placeholder,
+section#contact button:-ms-input-placeholder {
+  color: #835d1a;
 }
 .slick-initialized.slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -119,6 +175,7 @@ hr {
   margin-top: 2em;
 }
 footer {
+  margin-top: 1em;
   text-align: center;
   color: #835d1a;
 }
