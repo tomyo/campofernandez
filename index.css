@@ -27,7 +27,7 @@ div:focus {
 input,
 textarea,
 button,
-a {
+a.button {
   border: none;
   font-size: inherit;
   font-family: Arial;
@@ -37,7 +37,7 @@ a {
   border-radius: 1em;
 }
 button,
-a {
+a.button {
   cursor: pointer;
   color: #fff;
   background-color: #835d1a;
@@ -51,13 +51,23 @@ form {
 html {
   background-color: #fffacd;
   font-family: Arial;
-  font-size: 4.5vmin;
+  font-size: 4vmin;
+}
+@media screen and (min-width: 769px) {
+  html {
+    font-size: 3vmin;
+  }
 }
 body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   margin: 0;
+}
+@media screen and (min-width: 769px) {
+  body {
+    margin: 0 5em;
+  }
 }
 header {
   display: flex;
@@ -91,6 +101,11 @@ section#home img {
   max-width: 100vw;
   max-height: 100vh;
   margin: 0 auto;
+}
+@media screen and (min-width: 769px) {
+  section#home img {
+    max-height: 72vh;
+  }
 }
 section#products hr {
   border-width: 0.1em;
@@ -132,7 +147,7 @@ section#contact {
 .contact-link {
   align-self: center;
 }
-.show-on-target:not(:target) {
+.show-on-target:not(:target) * {
   display: none;
 }
 .show-on-target:target {

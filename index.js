@@ -3,10 +3,6 @@ hideMe = (event) => {
   event.target.classList.add('hidden');
 }
 
-hideContactFormButton = () => {
-  document.getElementById("show-contact-form").classList.add('hidden');
-}
-
 $(document).ready (() => {
   $('.slider-for').slick({
     lazyLoad: 'ondemand',
@@ -48,19 +44,44 @@ $(document).ready (() => {
     respondTo: 'min',
     autoplay: true
   });
+  showHideElements()
 });
 
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
+$('a[href^="#"]:not([href="#"])').click(function(event) {  // link starts with #, but not # alone
+  let hash = this.hash;
+  let duration = 1000
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    if ("js-fast-scroll" in event.target.classList) {
+      duration = 100
+      console.log('fast scroll')
     }
-  });
+    let target = $(hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html, body').animate({
+          scrollTop: target.offset().top
+        },
+        {
+          duration: duration,
+          complete: () => location.hash = hash,
+        }
+      );
+    }
+  }
 });
+
+window.onhashchange = (event) => showHideElements()
+showHideElements = () => {
+  let hash = location.hash
+  for (let item of document.getElementsByClassName("js-hide-on-different-target")) {
+    if (hash) {
+      if (item.id != hash) {
+        console.log(`hiding ${item.id}`)
+        item.classList.add('hidden')
+      }
+    } else {
+      console.log(`showing ${item.id}`)
+      item.classList.remove('hidden')
+    }
+  }
+}

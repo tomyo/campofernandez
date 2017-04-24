@@ -14,13 +14,11 @@ a, p, h1, h2, h3, h4, h5, h6, img, hr
 a
   text-decoration: none
   color: inherit
-// div:focus
-//   outline: none
 input, textarea, button, div
   &:focus
     outline: none
     // border: 0.1em beige solid
-input, textarea, button, a
+input, textarea, button, a.button
   border: none
   font-size: inherit
   font-family: first-font-family
@@ -29,7 +27,7 @@ input, textarea, button, a
   padding: 1em
   border-radius: 1em
   placeholder-color(title-color)
-button, a
+button, a.button
   cursor: pointer
   color: white
   background-color: title-color
@@ -73,13 +71,17 @@ horizontalMargin()
 html
   background-color: background-color
   font-family: first-font-family
-  font-size: 4.5vmin
+  font-size: 4vmin
+  @media screen and (min-width:769px)
+    font-size: 3vmin
 
 body
   display: flex
   flex-flow: column nowrap
   justify-content: space-between
   margin: 0
+  @media screen and (min-width:769px)
+    margin: 0 5em
 
 header
   // z-index: 1
@@ -107,6 +109,8 @@ section
   &#home
     img
       responsive()
+      @media screen and (min-width:769px)
+        max-height: 72vh
     margin-top: 1em
   &#products
     hr
@@ -137,7 +141,7 @@ section
 
 .contact-link
   align-self: center
-.show-on-target:not(:target)
+.show-on-target:not(:target) *
   display: none
 .show-on-target:target
   display: flex

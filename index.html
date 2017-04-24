@@ -34,8 +34,8 @@
     <main>
       <section id="home">
         <img src="logo.png"/>
-        <h3>WWW.CAMPOFERNANDEZ.CL</h3>
-        <a onclick="hideContactFormButton()" class="contact-link" href="#contact">
+        <h3><a href="https://www.campofernandez.cl">WWW.CAMPOFERNANDEZ.CL</a></h3>
+        <a class="contact-link button" href="#contact">
           CONTÁCTANOS
         </a>
       </section>
@@ -111,11 +111,6 @@
         </div>
       </section>
       <hr />
-      <section id="show-contact-form">
-        <a onclick="hideContactFormButton()" class="contact-link" href="#contact">
-          CONTÁCTANOS
-        </a>
-      </section>
       <section class="show-on-target" id="contact">
         <h3>CONTACTO</h3>
         <form>
@@ -125,6 +120,11 @@
           <textarea rows="6" placeholder="Consulta" required></textarea>
           <button type="submit">Enviar</button>
         </form>
+      </section>
+      <section id="show-contact-form-button" class="js-hide-on-different-target">
+        <a class="contact-link button js-fast-scroll" href="#contact">
+          CONTÁCTANOS
+        </a>
       </section>
       <section class="show-on-target" id="thanks">
         <h3>¡GRACIAS POR ESCRIBIRNOS!</h3>
