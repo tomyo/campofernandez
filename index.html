@@ -113,8 +113,12 @@
       <hr />
       <section class="show-on-target" id="contact">
         <h3>CONTACTO</h3>
-        <form>
-          <input name="name" type="text" placeholder="Nombre"/>
+        <form action="https://formspree.io/contacto@campofernandez.com" method="post">
+          <input type="hidden" name="_next" value="https://campofernandez.cl#thanks" />
+          <input type="hidden" name="_subject" value="Consulta web!" />
+          <input type="hidden" name="_cc" value="tomas@ha-team.co" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <input name="name" type="text" placeholder="Nombre" required/>
           <input name="email" type="email" placeholder="Mail" required/>
           <input name="phone" type="phone" placeholder="Teléfono"/>
           <textarea rows="6" placeholder="Consulta" required></textarea>
