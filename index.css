@@ -69,6 +69,11 @@ body {
     margin: 0 5em;
   }
 }
+@media screen and (min-width: 1025px) {
+  body {
+    margin: 0 8em;
+  }
+}
 header {
   display: flex;
   justify-content: space-around;
