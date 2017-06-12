@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="UTF-8">
@@ -13,7 +12,7 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="black-icon.svg" color="#5bbad5">
+    <link rel="mask-icon" href="icon.svg">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" defer/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" defer/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -26,12 +25,12 @@
     <link rel="stylesheet" type="text/css" href="index.css"/>
   </head>
   <body>
-    <!-- <header>
-      <a href="#home"><img class="black-icon" src="black-icon.svg"/></a>
-      <a href="#">Nosotros</a>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
-    </header> -->
+    <header>
+      <a rel="nofollow" href="#home"><img class="icon" src="icon.svg"/></a>
+      <!-- <a rel="nofollow" href="#">Nosotros</a> -->
+      <a rel="nofollow" href="#products">Productos</a>
+      <a rel="nofollow" href="#contact">Contacto</a>
+    </header>
     <main>
       <section id="home">
         <img src="logo.png"/>
@@ -126,7 +125,7 @@
           <button type="submit">Enviar</button>
         </form>
       </section>
-      <section id="show-contact-form-button" class="js-hide-on-different-target">
+      <section id="show-contact-form-button" class="js-hide-on-target" data-target="#contact">
         <a class="contact-link button js-fast-scroll" href="#contact">
           CONTÁCTANOS
         </a>

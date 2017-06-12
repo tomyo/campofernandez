@@ -73,15 +73,15 @@ $('a[href^="#"]:not([href="#"])').click(function(event) {  // link starts with #
 window.onhashchange = (event) => showHideElements()
 showHideElements = () => {
   let hash = location.hash
-  for (let item of document.getElementsByClassName("js-hide-on-different-target")) {
+  for (let item of document.getElementsByClassName("js-hide-on-target")) {
     if (hash) {
-      if (item.id != hash) {
+      if (item.dataset.target == hash) {
         console.log(`hiding ${item.id}`)
-        item.classList.add('hidden')
+        item.classList.add('hidden');
+        return
       }
-    } else {
-      console.log(`showing ${item.id}`)
-      item.classList.remove('hidden')
     }
+    console.log(`showing ${item.id}`);
+    item.classList.remove('hidden');
   }
 }

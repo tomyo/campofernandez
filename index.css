@@ -52,6 +52,7 @@ html {
   background-color: #fffacd;
   font-family: Arial;
   font-size: 4vmin;
+  color: #835d1a;
 }
 @media screen and (min-width: 769px) {
   html {
@@ -78,15 +79,18 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #835d1a;
-  height: 0;
-  position: fixed;
-  width: 100vw;
-  color: #fff;
+  color: inherit;
 }
-header .black-icon {
-  filter: invert(1);
-  height: 0;
+header a {
+  padding: 0.5em;
+  flex: 0 3em;
+}
+header a:hover {
+  background-color: #835d1a;
+  color: #fffacd;
+}
+header a:first-child:hover {
+  background-color: #fffacd;
 }
 main {
   margin-top: 0;
@@ -157,6 +161,9 @@ section#contact {
 }
 .show-on-target:target {
   display: flex;
+}
+.hide-on-target:target {
+  display: none;
 }
 .slick-initialized.slick-dotted.slick-slider {
   margin-bottom: 0;
